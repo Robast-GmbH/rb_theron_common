@@ -66,7 +66,7 @@
     </link>
 
 
-    <!-- <link name="${prefix}bottom_cover_link">
+   <link name="${prefix}bottom_cover_link">
       <inertial>
         <mass value="2.0" />
         <origin xyz="0 0 0" />
@@ -94,13 +94,13 @@
           <mesh filename="package://rb_theron_description/meshes/bases/mcq_prototype_bottom_cover.dae"/>
         </geometry>
       </collision>
-    </link> -->
+    </link> 
 
-    <!-- <joint name="${prefix}bottom_cover_joint" type="fixed">
+     <joint name="${prefix}bottom_cover_joint" type="fixed">
        <origin rpy="0 0 0" xyz="0 0 0"/>
        <parent link="${prefix}base_link"/>
        <child link="${prefix}bottom_cover_link"/>
-    </joint> -->
+    </joint>
 
     <!-- DOCKING CONTACTS -->
     <!--joint name="${prefix}base_docking_joint" type="fixed">
