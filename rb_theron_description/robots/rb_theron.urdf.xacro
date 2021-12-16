@@ -54,7 +54,7 @@
 	<!-- Robots Elements -->
 	<!-- *************** -->
 
-	<xacro:arg name="prefix" default="robot_"/>
+	<xacro:arg name="prefix" default=""/>
 
 	<!-- Here we create the robot elements using the xacro:macros imported at the beggining of this file -->
 	<!-- this property is for the chassis -->
