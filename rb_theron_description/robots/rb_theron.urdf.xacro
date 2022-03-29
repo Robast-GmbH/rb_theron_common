@@ -86,7 +86,7 @@
 
 
 	<!-- SENSORS -->
-	<!-- TODO: Should be intel_t265 -->
+	<!-- TODO: Should be sensor_intel_d435, but this one isn't migrated to ros2 yet -->
 	<!-- TODO: Moved 0.01 in x, otherwise the camera is still inside the robot -->
 	<xacro:sensor_r430 prefix="$(arg prefix)front_realsense_camera" parent="$(arg prefix)base_link" prefix_topic="front_realsense_camera">
 		<origin xyz="0.3305 0.0 0.1468" rpy="0 0 0"/>
@@ -105,16 +105,16 @@
 		<origin xyz="-0.1975 0.0 0.1598" rpy="0 0 0"/>
 	</xacro:sensor_imu_hector>
 
-	<xacro:sensor_hokuyo_ust20lx prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link" prefix_topic="front_laser" min_angle="-1.9507619" max_angle="1.9507619">
+	<xacro:sensor_sick_nanoscan3 prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link" prefix_topic="front_laser" min_angle="-1.9507619" max_angle="1.9507619">
 		<origin xyz="0.250 0.0 0.1643" rpy="0 3.1416 3.1416"/>
-	</xacro:sensor_hokuyo_ust20lx>
+	</xacro:sensor_sick_nanoscan3>
 
 	<!-- Uncomment this as soon as we can convert pointcloud to laserscan -->
 	<!-- <xacro:sensor_rs_lidar_16 prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link" prefix_topic="front_laser" min_angle="-1.9507619" max_angle="1.9507619">
 		<origin xyz="0.250 0.0 0.1643" rpy="1.57079632679 0 0"/>
 	</xacro:sensor_rs_lidar_16> -->
 
-	<xacro:sensor_sick_nanoscan3 prefix="$(arg prefix)back_laser" parent="$(arg prefix)base_link" prefix_topic="back_laser" min_angle="-1.8107619" max_angle="1.8107619">
+	<!-- <xacro:sensor_sick_nanoscan3 prefix="$(arg prefix)back_laser" parent="$(arg prefix)base_link" prefix_topic="back_laser" min_angle="-1.8107619" max_angle="1.8107619">
 		<origin xyz="-0.250 0.0 0.1643" rpy="0 3.1416 0"/>
-	</xacro:sensor_sick_nanoscan3>
+	</xacro:sensor_sick_nanoscan3> -->
 </robot>
