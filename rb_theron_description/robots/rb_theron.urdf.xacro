@@ -109,10 +109,9 @@
 		<origin xyz="0.250 0.0 0.1643" rpy="0 3.1416 3.1416"/>
 	</xacro:sensor_sick_nanoscan3>
 
-	<!-- Uncomment this as soon as we can convert pointcloud to laserscan -->
-	<!-- <xacro:sensor_rs_lidar_16 prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link" prefix_topic="front_laser" min_angle="-1.9507619" max_angle="1.9507619">
-		<origin xyz="0.250 0.0 0.1643" rpy="1.57079632679 0 0"/>
-	</xacro:sensor_rs_lidar_16> -->
+	<xacro:sensor_rs_lidar_16 prefix="$(arg prefix)top_laser" parent="$(arg prefix)base_link" prefix_topic="top_laser" min_angle="-1.9507619" max_angle="1.9507619">
+		<origin xyz="0.214 0.0 0.275" rpy="-1.57079632679 0 -0.23"/>
+	</xacro:sensor_rs_lidar_16>
 
 	<!-- <xacro:sensor_sick_nanoscan3 prefix="$(arg prefix)back_laser" parent="$(arg prefix)base_link" prefix_topic="back_laser" min_angle="-1.8107619" max_angle="1.8107619">
 		<origin xyz="-0.250 0.0 0.1643" rpy="0 3.1416 0"/>
@@ -122,7 +121,7 @@
 	<!-- ROBAST Module Cage -->
 	<xacro:include filename="$(find rb_theron_description)/urdf/module_cage/module_cage.urdf.xacro" />
 	<xacro:module_cage prefix="$(arg prefix)module_cage" parent="$(arg prefix)base_link">
-		<origin xyz="-0.18 -0.20 0.2225" rpy="0 0 1.570796326794896619"/>
+		<origin xyz="-0.18 -0.1997 0.2225" rpy="0 0 1.570796326794896619"/>
 	</xacro:module_cage>
 
 </robot>
