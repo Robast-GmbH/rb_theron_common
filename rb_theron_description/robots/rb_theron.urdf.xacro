@@ -63,7 +63,7 @@
 	<xacro:theron_base prefix="$(arg prefix)" publish_bf="true" hq="${hq}" />
 
 	<!-- Gazebo ros control pluggins -->
-	<xacro:ros_control/>
+	<xacro:ros_control prefix="$(arg prefix)"/>
 
 	<xacro:gazebo_colors prefix="$(arg prefix)"/>
 

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <robot name="module_cage" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<macro name="box_inertia_robot" params="m x y z">
+<xacro:macro name="box_inertia_robot" params="m x y z">
 	<inertia  ixx="${m*(y*y+z*z)/12}" ixy = "0" ixz = "0"
 			iyy="${m*(x*x+z*z)/12}" iyz = "0"
 			izz="${m*(x*x+z*z)/12}" />
-</macro>
+</xacro:macro>
 
   <xacro:macro name="module_cage" params="prefix parent *origin">
 
