@@ -114,7 +114,7 @@
 	</xacro:sensor_rs_lidar_16>-->
 
 	<xacro:sensor_rs_bpearl prefix="$(arg prefix)top_laser"  parent="$(arg prefix)base_link" prefix_topic="top_laser" range_min="0.1" range_max="90" hfov="360" samples="1200" vfov="90.0" lasers="32" fps="15" gpu="false">
-            <origin xyz="0.26 0.151 1.3" rpy="-1.570796326795 0 -1.570796326795"/>
+            <origin xyz="0.28 -0.159 1.22" rpy="-1.570796326795 0 -1.570796326795"/>
         </xacro:sensor_rs_bpearl>
 
 	<!-- <xacro:sensor_sick_nanoscan3 prefix="$(arg prefix)back_laser" parent="$(arg prefix)base_link" prefix_topic="back_laser" min_angle="-1.8107619" max_angle="1.8107619">
@@ -125,7 +125,7 @@
 	<!-- ROBAST Module Cage -->
 	<xacro:include filename="$(find rb_theron_description)/urdf/module_cage/module_cage.urdf.xacro" />
 	<xacro:module_cage prefix="$(arg prefix)module_cage" parent="$(arg prefix)base_link">
-		<origin xyz="-0.18 -0.1997 0.2225" rpy="0 0 1.570796326794896619"/>
+		<origin xyz="0.35 -0.0 -0.075" rpy="0 0 1.570796326794896619"/>
 	</xacro:module_cage>
 
 </robot>
