@@ -121,11 +121,22 @@
 		<origin xyz="-0.250 0.0 0.1643" rpy="0 3.1416 0"/>
 	</xacro:sensor_sick_nanoscan3> -->
 
+	<xacro:arg name="camera_name"   default="oak" />
+	<xacro:arg name="camera_model"  default="OAK-D-LITE" />
+	<xacro:arg name="base_frame"    default="oak-d_frame" />
+	<xacro:arg name="cam_pos_x"     default="0.347" />
+	<xacro:arg name="cam_pos_y"     default="-0.159" />
+	<xacro:arg name="cam_pos_z"     default="1.149" />
+	<xacro:arg name="cam_roll"      default="0.0" />
+	<xacro:arg name="cam_pitch"     default="0.0" />
+	<xacro:arg name="cam_yaw"       default="0.0" />
+
+	<xacro:depthai_camera camera_name = "$(arg camera_name)" parent = "$(arg prefix)base_link" camera_model = "$(arg camera_model)" base_frame = "$(arg base_frame)" cam_pos_x = "$(arg cam_pos_x)" cam_pos_y = "$(arg cam_pos_y)" cam_pos_z = "$(arg cam_pos_z)" cam_roll = "$(arg cam_roll)" cam_pitch = "$(arg cam_pitch)" cam_yaw = "$(arg cam_yaw)"/>
 
 	<!-- ROBAST Module Cage -->
-	<xacro:include filename="$(find rb_theron_description)/urdf/module_cage/module_cage.urdf.xacro" />
+	<!-- <xacro:include filename="$(find rb_theron_description)/urdf/module_cage/module_cage.urdf.xacro" />
 	<xacro:module_cage prefix="$(arg prefix)module_cage" parent="$(arg prefix)base_link">
 		<origin xyz="0.35 -0.0 -0.075" rpy="0 0 1.570796326794896619"/>
-	</xacro:module_cage>
+	</xacro:module_cage> -->
 
 </robot>
